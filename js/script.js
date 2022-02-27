@@ -1,4 +1,4 @@
-function displayQuote() {
+const displayQuote = () => {
     fetch('https://api.kanye.rest/')
         .then(response => response.json())
         .then(data => setQuote(data))
@@ -6,7 +6,7 @@ function displayQuote() {
 }
 displayQuote();
 
-function setQuote(data) {
+const setQuote = data => {
     document.getElementById('qoute-name').innerText = data.quote;
 
 }
